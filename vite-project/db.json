@@ -1,20 +1,796 @@
 {
   "movies": [
     {
-      "Title": "The Lion King",
-      "Price": 150
+      "title": "The Lion King",
+      "price": 10,
+      "seats": [
+        {
+          "id": 1,
+          "isOccupied": false
+        },
+        {
+          "id": 2,
+          "isOccupied": false
+        },
+        {
+          "id": 3,
+          "isOccupied": false
+        },
+        {
+          "id": 4,
+          "isOccupied": false
+        },
+        {
+          "id": 5,
+          "isOccupied": false
+        },
+        {
+          "id": 6,
+          "isOccupied": false
+        },
+        {
+          "id": 7,
+          "isOccupied": false
+        },
+        {
+          "id": 8,
+          "isOccupied": false
+        },
+        {
+          "id": 9,
+          "isOccupied": false
+        },
+        {
+          "id": 10,
+          "isOccupied": false
+        },
+        {
+          "id": 11,
+          "isOccupied": false
+        },
+        {
+          "id": 12,
+          "isOccupied": false
+        },
+        {
+          "id": 13,
+          "isOccupied": false
+        },
+        {
+          "id": 14,
+          "isOccupied": false
+        },
+        {
+          "id": 15,
+          "isOccupied": false
+        },
+        {
+          "id": 16,
+          "isOccupied": false
+        },
+        {
+          "id": 17,
+          "isOccupied": false
+        },
+        {
+          "id": 18,
+          "isOccupied": false
+        },
+        {
+          "id": 19,
+          "isOccupied": false
+        },
+        {
+          "id": 20,
+          "isOccupied": false
+        },
+        {
+          "id": 21,
+          "isOccupied": false
+        },
+        {
+          "id": 22,
+          "isOccupied": false
+        },
+        {
+          "id": 23,
+          "isOccupied": false
+        },
+        {
+          "id": 24,
+          "isOccupied": false
+        },
+        {
+          "id": 25,
+          "isOccupied": false
+        },
+        {
+          "id": 26,
+          "isOccupied": true
+        },
+        {
+          "id": 27,
+          "isOccupied": true
+        },
+        {
+          "id": 28,
+          "isOccupied": true
+        },
+        {
+          "id": 29,
+          "isOccupied": true
+        },
+        {
+          "id": 30,
+          "isOccupied": false
+        },
+        {
+          "id": 31,
+          "isOccupied": false
+        },
+        {
+          "id": 32,
+          "isOccupied": false
+        },
+        {
+          "id": 33,
+          "isOccupied": false
+        },
+        {
+          "id": 34,
+          "isOccupied": false
+        },
+        {
+          "id": 35,
+          "isOccupied": false
+        },
+        {
+          "id": 36,
+          "isOccupied": false
+        },
+        {
+          "id": 37,
+          "isOccupied": false
+        },
+        {
+          "id": 38,
+          "isOccupied": false
+        },
+        {
+          "id": 39,
+          "isOccupied": false
+        },
+        {
+          "id": 40,
+          "isOccupied": false
+        },
+        {
+          "id": 41,
+          "isOccupied": false
+        },
+        {
+          "id": 42,
+          "isOccupied": false
+        },
+        {
+          "id": 43,
+          "isOccupied": false
+        },
+        {
+          "id": 44,
+          "isOccupied": false
+        },
+        {
+          "id": 45,
+          "isOccupied": false
+        },
+        {
+          "id": 46,
+          "isOccupied": false
+        },
+        {
+          "id": 47,
+          "isOccupied": false
+        },
+        {
+          "id": 48,
+          "isOccupied": false
+        }
+      ]
     },
     {
-      "Title": "Mowgli: Legend of the Jungle",
-      "Price": 150
+      "title": "Mowgli: Legend of the Jungle",
+      "price": 10,
+      "seats": [
+        {
+          "id": 1,
+          "isOccupied": false
+        },
+        {
+          "id": 2,
+          "isOccupied": false
+        },
+        {
+          "id": 3,
+          "isOccupied": false
+        },
+        {
+          "id": 4,
+          "isOccupied": false
+        },
+        {
+          "id": 5,
+          "isOccupied": false
+        },
+        {
+          "id": 6,
+          "isOccupied": false
+        },
+        {
+          "id": 7,
+          "isOccupied": false
+        },
+        {
+          "id": 8,
+          "isOccupied": false
+        },
+        {
+          "id": 9,
+          "isOccupied": false
+        },
+        {
+          "id": 10,
+          "isOccupied": false
+        },
+        {
+          "id": 11,
+          "isOccupied": false
+        },
+        {
+          "id": 12,
+          "isOccupied": false
+        },
+        {
+          "id": 13,
+          "isOccupied": true
+        },
+        {
+          "id": 14,
+          "isOccupied": false
+        },
+        {
+          "id": 15,
+          "isOccupied": false
+        },
+        {
+          "id": 16,
+          "isOccupied": false
+        },
+        {
+          "id": 17,
+          "isOccupied": false
+        },
+        {
+          "id": 18,
+          "isOccupied": false
+        },
+        {
+          "id": 19,
+          "isOccupied": false
+        },
+        {
+          "id": 20,
+          "isOccupied": false
+        },
+        {
+          "id": 21,
+          "isOccupied": false
+        },
+        {
+          "id": 22,
+          "isOccupied": false
+        },
+        {
+          "id": 23,
+          "isOccupied": false
+        },
+        {
+          "id": 24,
+          "isOccupied": false
+        },
+        {
+          "id": 25,
+          "isOccupied": false
+        },
+        {
+          "id": 26,
+          "isOccupied": false
+        },
+        {
+          "id": 27,
+          "isOccupied": false
+        },
+        {
+          "id": 28,
+          "isOccupied": false
+        },
+        {
+          "id": 29,
+          "isOccupied": false
+        },
+        {
+          "id": 30,
+          "isOccupied": false
+        },
+        {
+          "id": 31,
+          "isOccupied": false
+        },
+        {
+          "id": 32,
+          "isOccupied": false
+        },
+        {
+          "id": 33,
+          "isOccupied": false
+        },
+        {
+          "id": 34,
+          "isOccupied": true
+        },
+        {
+          "id": 35,
+          "isOccupied": false
+        },
+        {
+          "id": 36,
+          "isOccupied": false
+        },
+        {
+          "id": 37,
+          "isOccupied": false
+        },
+        {
+          "id": 38,
+          "isOccupied": false
+        },
+        {
+          "id": 39,
+          "isOccupied": false
+        },
+        {
+          "id": 40,
+          "isOccupied": false
+        },
+        {
+          "id": 41,
+          "isOccupied": false
+        },
+        {
+          "id": 42,
+          "isOccupied": false
+        },
+        {
+          "id": 43,
+          "isOccupied": false
+        },
+        {
+          "id": 44,
+          "isOccupied": false
+        },
+        {
+          "id": 45,
+          "isOccupied": false
+        },
+        {
+          "id": 46,
+          "isOccupied": false
+        },
+        {
+          "id": 47,
+          "isOccupied": false
+        },
+        {
+          "id": 48,
+          "isOccupied": false
+        }
+      ]
     },
     {
-      "Title": "Doctor Strange",
-      "Price": 150
+      "title": "Doctor Strange",
+      "price": 12,
+      "seats": [
+        {
+          "id": 1,
+          "isOccupied": false
+        },
+        {
+          "id": 2,
+          "isOccupied": false
+        },
+        {
+          "id": 3,
+          "isOccupied": false
+        },
+        {
+          "id": 4,
+          "isOccupied": false
+        },
+        {
+          "id": 5,
+          "isOccupied": false
+        },
+        {
+          "id": 6,
+          "isOccupied": false
+        },
+        {
+          "id": 7,
+          "isOccupied": false
+        },
+        {
+          "id": 8,
+          "isOccupied": false
+        },
+        {
+          "id": 9,
+          "isOccupied": false
+        },
+        {
+          "id": 10,
+          "isOccupied": false
+        },
+        {
+          "id": 11,
+          "isOccupied": false
+        },
+        {
+          "id": 12,
+          "isOccupied": false
+        },
+        {
+          "id": 13,
+          "isOccupied": false
+        },
+        {
+          "id": 14,
+          "isOccupied": false
+        },
+        {
+          "id": 15,
+          "isOccupied": false
+        },
+        {
+          "id": 16,
+          "isOccupied": false
+        },
+        {
+          "id": 17,
+          "isOccupied": false
+        },
+        {
+          "id": 18,
+          "isOccupied": false
+        },
+        {
+          "id": 19,
+          "isOccupied": false
+        },
+        {
+          "id": 20,
+          "isOccupied": false
+        },
+        {
+          "id": 21,
+          "isOccupied": false
+        },
+        {
+          "id": 22,
+          "isOccupied": false
+        },
+        {
+          "id": 23,
+          "isOccupied": false
+        },
+        {
+          "id": 24,
+          "isOccupied": false
+        },
+        {
+          "id": 25,
+          "isOccupied": false
+        },
+        {
+          "id": 26,
+          "isOccupied": false
+        },
+        {
+          "id": 27,
+          "isOccupied": false
+        },
+        {
+          "id": 28,
+          "isOccupied": false
+        },
+        {
+          "id": 29,
+          "isOccupied": false
+        },
+        {
+          "id": 30,
+          "isOccupied": false
+        },
+        {
+          "id": 31,
+          "isOccupied": false
+        },
+        {
+          "id": 32,
+          "isOccupied": false
+        },
+        {
+          "id": 33,
+          "isOccupied": false
+        },
+        {
+          "id": 34,
+          "isOccupied": false
+        },
+        {
+          "id": 35,
+          "isOccupied": false
+        },
+        {
+          "id": 36,
+          "isOccupied": false
+        },
+        {
+          "id": 37,
+          "isOccupied": false
+        },
+        {
+          "id": 38,
+          "isOccupied": false
+        },
+        {
+          "id": 39,
+          "isOccupied": false
+        },
+        {
+          "id": 40,
+          "isOccupied": false
+        },
+        {
+          "id": 41,
+          "isOccupied": false
+        },
+        {
+          "id": 42,
+          "isOccupied": true
+        },
+        {
+          "id": 43,
+          "isOccupied": true
+        },
+        {
+          "id": 44,
+          "isOccupied": true
+        },
+        {
+          "id": 45,
+          "isOccupied": false
+        },
+        {
+          "id": 46,
+          "isOccupied": false
+        },
+        {
+          "id": 47,
+          "isOccupied": false
+        },
+        {
+          "id": 48,
+          "isOccupied": false
+        }
+      ]
     },
     {
-      "Title": "John Wick: The final chapter",
-      "Price": 180
+      "title": "John Wick: The final chapter",
+      "price": 13,
+      "seats": [
+        {
+          "id": 1,
+          "isOccupied": false
+        },
+        {
+          "id": 2,
+          "isOccupied": false
+        },
+        {
+          "id": 3,
+          "isOccupied": false
+        },
+        {
+          "id": 4,
+          "isOccupied": false
+        },
+        {
+          "id": 5,
+          "isOccupied": false
+        },
+        {
+          "id": 6,
+          "isOccupied": false
+        },
+        {
+          "id": 7,
+          "isOccupied": false
+        },
+        {
+          "id": 8,
+          "isOccupied": false
+        },
+        {
+          "id": 9,
+          "isOccupied": false
+        },
+        {
+          "id": 10,
+          "isOccupied": false
+        },
+        {
+          "id": 11,
+          "isOccupied": false
+        },
+        {
+          "id": 12,
+          "isOccupied": false
+        },
+        {
+          "id": 13,
+          "isOccupied": true
+        },
+        {
+          "id": 14,
+          "isOccupied": true
+        },
+        {
+          "id": 15,
+          "isOccupied": false
+        },
+        {
+          "id": 16,
+          "isOccupied": false
+        },
+        {
+          "id": 17,
+          "isOccupied": false
+        },
+        {
+          "id": 18,
+          "isOccupied": false
+        },
+        {
+          "id": 19,
+          "isOccupied": false
+        },
+        {
+          "id": 20,
+          "isOccupied": false
+        },
+        {
+          "id": 21,
+          "isOccupied": false
+        },
+        {
+          "id": 22,
+          "isOccupied": false
+        },
+        {
+          "id": 23,
+          "isOccupied": false
+        },
+        {
+          "id": 24,
+          "isOccupied": false
+        },
+        {
+          "id": 25,
+          "isOccupied": false
+        },
+        {
+          "id": 26,
+          "isOccupied": false
+        },
+        {
+          "id": 27,
+          "isOccupied": false
+        },
+        {
+          "id": 28,
+          "isOccupied": false
+        },
+        {
+          "id": 29,
+          "isOccupied": false
+        },
+        {
+          "id": 30,
+          "isOccupied": false
+        },
+        {
+          "id": 31,
+          "isOccupied": false
+        },
+        {
+          "id": 32,
+          "isOccupied": false
+        },
+        {
+          "id": 33,
+          "isOccupied": false
+        },
+        {
+          "id": 34,
+          "isOccupied": false
+        },
+        {
+          "id": 35,
+          "isOccupied": false
+        },
+        {
+          "id": 36,
+          "isOccupied": false
+        },
+        {
+          "id": 37,
+          "isOccupied": false
+        },
+        {
+          "id": 38,
+          "isOccupied": false
+        },
+        {
+          "id": 39,
+          "isOccupied": false
+        },
+        {
+          "id": 40,
+          "isOccupied": false
+        },
+        {
+          "id": 41,
+          "isOccupied": false
+        },
+        {
+          "id": 42,
+          "isOccupied": false
+        },
+        {
+          "id": 43,
+          "isOccupied": false
+        },
+        {
+          "id": 44,
+          "isOccupied": false
+        },
+        {
+          "id": 45,
+          "isOccupied": false
+        },
+        {
+          "id": 46,
+          "isOccupied": false
+        },
+        {
+          "id": 47,
+          "isOccupied": false
+        },
+        {
+          "id": 48,
+          "isOccupied": false
+        }
+      ]
     }
   ]
 }
