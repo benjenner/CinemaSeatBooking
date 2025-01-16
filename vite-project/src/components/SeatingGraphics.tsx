@@ -1,4 +1,4 @@
-function Showcase() {
+function SeatingGraphics() {
   return (
     <>
       <ul className="showcase">
@@ -19,4 +19,4 @@ function Showcase() {
   );
 }
 
-export default Showcase;
+export default SeatingGraphics;

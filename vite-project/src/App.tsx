@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MoviePicker from "./components/MoviePicker";
-import Showcase from "./components/Showcase";
+import SeatingGraphics from "./components/SeatingGraphics";
 import SeatPicker from "./components/SeatPicker";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <MoviePicker></MoviePicker>
-      <Showcase></Showcase>
+      <SeatingGraphics></SeatingGraphics>
       <SeatPicker></SeatPicker>
     </>
   );

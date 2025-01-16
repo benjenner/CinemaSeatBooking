@@ -1,26 +1,55 @@
 import axios from "axios";
+import {Seat} from "./Seat"
 
 const url = "http://localhost:3000/movies";
 
-class Movie {
+export interface Movie {
   title: string;
-  price: number;
-  id: string;
-
-  constructor(title: string, price: number, id: string) {
-    this.title = title;
-    this.price = price;
-    this.id = id;
-  }
+  price:number;
+  id:string;
+  seats: Seat[];
 }
 
-const movieBox = document.getElementById("movie") as HTMLSelectElement;
 
-export async function getAllMovies() {
+
+export async function getMovies() {
   // Specificerar att en array av  typen Movie kommer returneras
   const response = await axios.get<Movie[]>(url);
   return response.data;
 }
+
+
+//GetMovieById
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Movie {
+//   title: string;
+//   price: number;
+//   id: string;
+
+//   constructor(title: string, price: number, id: string) {
+//     this.title = title;
+//     this.price = price;
+//     this.id = id;
+//   }
+// }
+
+
+
+
+// const movieBox = document.getElementById("movie") as HTMLSelectElement;
+
 
 // export async function getAllMovies() {
 //   // Specificerar att en array av  typen Movie kommer returneras

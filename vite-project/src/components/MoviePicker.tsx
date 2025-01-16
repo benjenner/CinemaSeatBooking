@@ -1,20 +1,45 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getAllMovies } from "./Movie";
+import { getMovies } from "./Movie";
+import {Movie} from "./Movie"
+
 
 export const MoviePicker = () => {
-  const [movies, setMovies] = useState([]);
+  // Använder useState-hook för att skapa state-variabel movies. movies sätts till att vara en array av Movie-objekt
+  // setMovies uppdaterar värdet av movies 
+  const [movies, setMovies] = useState<Movie []>([]);
 
-  useEffect(() => {}, []);
+  // useEffect-hooken används för att köra en effekt när komponenten först laddas. 
+  // Den angivna tomma arrayen betyder att effekten bara körs en gång när komponenten monteras.
+  useEffect(() => {
+    
+    const fetchData = async()=>{
+      const result = await getMovies()
+      // setMovies anropas med result för att uppdate movies-variabeln med den hämtade datan
+      setMovies(result);
+    }
 
+    // fetchData anropas och startar processen med att hämta och uppdatera data  
+    fetchData()
+  }, []);
+  
   return (
     <>
       <div className="movie-container">
         <label htmlFor="movie">Pick a movie:</label>
-        <select name="movie" id="movie"></select>
+        <select name="movie" id="movie">
+          {
+            movies.map((movie, i) => (
+              <option key={i} value={movie.id} >{movie.title} ({movie.price}$)</option>
+            ))
+          }
+          </select>
       </div>
     </>
   );
 };
 
 export default MoviePicker;
+
+
+
