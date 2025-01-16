@@ -1,11 +1,15 @@
 import { useState } from "react";
-import Main from "./components/Main";
+import MoviePicker from "./components/MoviePicker";
+import Showcase from "./components/Showcase";
+import SeatPicker from "./components/SeatPicker";
 
 function App() {
   const [count, setCount] = useState(0);
   return (
     <>
-      <Main></Main>
+      <MoviePicker></MoviePicker>
+      <Showcase></Showcase>
+      <SeatPicker></SeatPicker>
     </>
   );
 }
