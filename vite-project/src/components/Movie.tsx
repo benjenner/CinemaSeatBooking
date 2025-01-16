@@ -5,30 +5,31 @@ const url = "http://localhost:3000/movies";
 class Movie {
   title: string;
   price: number;
+  id: string;
 
-  constructor(title: string, price: number) {
+  constructor(title: string, price: number, id: string) {
     this.title = title;
     this.price = price;
+    this.id = id;
   }
-}
-
-async function getAllMovies() {
-  const movies = await axios.get(url);
-  console.log(movies.data);
-  return movies.data;
 }
 
 const movieBox = document.getElementById("movie") as HTMLSelectElement;
 
-movieBox.addEventListener("click", async () => {
-  const movies = await getAllMovies();
-  listAllMovies(movies);
-});
-
-function listAllMovies(movies: Movie[]) {
-  movies.forEach((movie) => {
-    const option = document.createElement("Option");
-    movieBox.appendChild(option);
-    option.title = `${movie.title} (${movie.price})`;
-  });
+export async function getAllMovies() {
+  // Specificerar att en array av  typen Movie kommer returneras
+  const response = await axios.get<Movie[]>(url);
+  return response.data;
 }
+
+// export async function getAllMovies() {
+//   // Specificerar att en array av  typen Movie kommer returneras
+//   const response = await axios.get<Movie[]>(url);
+//   const movies = response.data;
+
+//   movies.forEach((movie) => {
+//     const option = document.createElement("option");
+//     movieBox.appendChild(option);
+//     option.textContent = `${movie.title} (${movie.price})`;
+//   });
+// }
