@@ -1,4 +1,4 @@
-export interface Seat{
-    seatNumber: number
-    isOccupied: boolean
+export interface Seat {
+  seatNumber: number;
+  isOccupied: boolean;
 }
