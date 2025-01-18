@@ -114,3 +114,73 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookingBtn {
+  margin-top: 80px;
+  font-size: 1.2em;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #6feaf6;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.adminContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.adminBtn {
+  margin-top: 250px;
+  font-size: 0.8em;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #ffd1dc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bookingContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 2px dotted #6feaf6;
+  gap: 20px;
+  padding: 30px;
+  width: 400px;
+  height: auto;
+}
+
+.inputField {
+  font-size: 1.2em;
+}
+
+input {
+  max-width: 100%;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.submitBtn {
+  font-size: 1.2em;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #ffd1dc;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.error {
+  color: red;
+}
