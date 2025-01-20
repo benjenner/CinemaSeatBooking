@@ -1,25 +1,25 @@
-import { useFormik } from "formik";
+// import { useFormik } from "formik";
 // Importerar hook'en "useState"
 import React, { useState } from "react";
 
-function validateForm(values) {
-  const errors = {};
-  if (!values.fullName) {
-    errors.fullName = "Name is required";
-  } else if (values.firstName.length < 2) {
-    errors.firstName = "Must be 2 characters or more";
-  } else if (!values.firstName.contain(" ")) {
-    errors.firstName = "Both names required";
-  }
+// function validateForm(values) {
+//   const errors = {};
+//   if (!values.fullName) {
+//     errors.fullName = "Name is required";
+//   } else if (values.firstName.length < 2) {
+//     errors.firstName = "Must be 2 characters or more";
+//   } else if (!values.firstName.contain(" ")) {
+//     errors.firstName = "Both names required";
+//   }
 
-  if (!values.phone) {
-    errors.phone = "Phone number is required";
-  } else if (values.phone.contains() > 20) {
-    errors.phone = "Must be 20 characters or less";
-  }
+//   if (!values.phone) {
+//     errors.phone = "Phone number is required";
+//   } else if (values.phone.contains() > 20) {
+//     errors.phone = "Must be 20 characters or less";
+//   }
 
-  return errors;
-}
+//   return errors;
+// }
 
 // Definierar en funktionell komponent enligt"React.FC"
 const BookingForm: React.FC = () => {
@@ -32,18 +32,18 @@ const BookingForm: React.FC = () => {
     setShowForm(true);
   };
 
-  const formik = useFormik({
-    // Var/Hur typ'ar jag parametrarna?
-    initialValues: {
-      fullName: "",
-      phone: "",
-    },
-    validate: validateForm,
-    onSubmit: (values) => {
-      // fetch  method = post -> JSON API
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  // const formik = useFormik({
+  //   // Var/Hur typ'ar jag parametrarna?
+  //   initialValues: {
+  //     fullName: "",
+  //     phone: "",
+  //   },
+  //   validate: validateForm,
+  //   onSubmit: (values) => {
+  //     // fetch  method = post -> JSON API
+  //     alert(JSON.stringify(values, null, 2));
+  //   },
+  // });
   return (
     <>
       <div className="btnContainer">
@@ -53,19 +53,20 @@ const BookingForm: React.FC = () => {
       </div>
       {/* Om showform är satt till true, rendera följande */}
       {showForm && (
-        <form className="bookingContainer" onSubmit={formik.handleSubmit}>
+        <form className="bookingContainer">
+          {/* <form className="bookingContainer" onSubmit={formik.handleSubmit}> */}
           <div className="inputField">
             <label htmlFor="fullName">Name</label>
             <input
               id="fullName"
               name="fullName"
               type="text"
-              onChange={formik.handleChange}
-              value={formik.values.fullName}
+              // onChange={formik.handleChange}
+              // value={formik.values.fullName}
             ></input>
-            {formik.errors.fullName ? (
+            {/* {formik.errors.fullName ? (
               <span className="error">{formik.errors.fullName}</span>
-            ) : null}
+            ) : null} */}
           </div>
           <div className="inputField">
             <label htmlFor="phone">Phone</label>
@@ -73,12 +74,12 @@ const BookingForm: React.FC = () => {
               id="phone"
               name="phone"
               type="tel"
-              onChange={formik.handleChange}
-              value={formik.values.phone}
+              // onChange={formik.handleChange}
+              // value={formik.values.phone}
             ></input>
-            {formik.errors.phone ? (
+            {/* {formik.errors.phone ? (
               <span className="error">{formik.errors.phone}</span>
-            ) : null}
+            ) : null} */}
           </div>
           <div className="submitButton">
             <button className="submitBtn" type="submit">
