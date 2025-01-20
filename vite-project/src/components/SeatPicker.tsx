@@ -4,16 +4,25 @@ const seats: Seat[] = [
   {
     seatNumber: 1,
     isOccupied: false,
+    customer: {
+      fullName: "Benjamin",
+      phone: 70823823,
+    },
   },
   {
     seatNumber: 2,
     isOccupied: true,
+    customer: {
+      fullName: "Carolin",
+      phone: 72373847,
+    },
   },
 ];
 
+// Anropa GetSelectedMovie(). ID returneras.
+// Skicka in ID (GetMovieById). Loopa igenom filmens säten och skriv ut
+
 function SeatPicker() {
-  // Hämta vilken film som är vald via id
-  // Hämta och skriva ut sätena till den filmen (GetMovieById)
   return (
     <>
       <div className="container">

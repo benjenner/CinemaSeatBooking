@@ -4,8 +4,6 @@ import { getMovies } from "./Movie";
 import { Movie } from "./Movie";
 
 export const MoviePicker = () => {
-  // Använder useState-hook för att skapa state-variabel movies. movies sätts till att vara en array av Movie-objekt
-  // setMovies uppdaterar värdet av movies
   const [movies, setMovies] = useState<Movie[]>([]);
 
   // useEffect-hooken används för att köra en effekt när komponenten först laddas.
