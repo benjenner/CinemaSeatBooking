@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import MoviePicker from "./components/MoviePicker";
 import SeatingGraphics from "./components/SeatingGraphics";
 import SeatPicker from "./components/SeatPicker";
@@ -6,12 +6,15 @@ import BookingForm from "./components/BookingForm";
 import AdminForm from "./components/AdminForm";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectedMovie, setSelectedMovie] = useState<string>("");
   return (
     <>
-      <MoviePicker></MoviePicker>
+      <MoviePicker
+        selectedMovie={selectedMovie}
+        setSelectedMovie={setSelectedMovie}
+      ></MoviePicker>
       <SeatingGraphics></SeatingGraphics>
-      <SeatPicker></SeatPicker>
+      <SeatPicker selectedMovie={selectedMovie}></SeatPicker>
       <BookingForm></BookingForm>
       <AdminForm></AdminForm>
     </>

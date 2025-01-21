@@ -1,6 +1,7 @@
 {
   "movies": [
     {
+      "id": "1",
       "title": "The Lion King",
       "price": 10,
       "seats": [
@@ -22,11 +23,11 @@
         },
         {
           "id": 5,
-          "isOccupied": false
+          "isOccupied": true
         },
         {
           "id": 6,
-          "isOccupied": false
+          "isOccupied": true
         },
         {
           "id": 7,
@@ -38,7 +39,7 @@
         },
         {
           "id": 9,
-          "isOccupied": false
+          "isOccupied": true
         },
         {
           "id": 10,
@@ -199,6 +200,7 @@
       ]
     },
     {
+      "id": "2",
       "title": "Mowgli: Legend of the Jungle",
       "price": 10,
       "seats": [
@@ -397,6 +399,7 @@
       ]
     },
     {
+      "id": "3",
       "title": "Doctor Strange",
       "price": 12,
       "seats": [
@@ -595,6 +598,7 @@
       ]
     },
     {
+      "id": "4",
       "title": "John Wick: The final chapter",
       "price": 13,
       "seats": [
