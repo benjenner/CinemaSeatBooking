@@ -7,7 +7,7 @@ export interface Movie {
   title: string;
   price: number;
   id: string;
-  seats: Seat[];
+  seats?: Seat[];
 }
 
 export async function getMovies() {
@@ -19,3 +19,8 @@ export async function getMovies() {
 // GetSelectedMovie()
 
 //GetMovieById
+
+export async function getMovieById(id: string): Promise<Movie | undefined> {
+  const movies = await getMovies();
+  return movies.find((movie) => movie.id === id);
+}
