@@ -8,7 +8,7 @@ type MovieProps = {
   setSelectedMovie: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export const MoviePicker: React.FC<MovieProps> = ({
+const MoviePicker: React.FC<MovieProps> = ({
   selectedMovie,
   setSelectedMovie,
 }) => {

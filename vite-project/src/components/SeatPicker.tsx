@@ -1,4 +1,4 @@
-import { Seat } from "./Seat";
+import { Seat, getSeats } from "./Seat";
 import { getMovieById, Movie } from "./Movie";
 import { useState, useEffect } from "react";
 
@@ -16,10 +16,27 @@ function SeatPicker({ selectedMovie }: MovieProps) {
   const [movie, setMovie] = useState<Movie>();
   const [className, setClassName] = useState("seat");
 
-  // Måste specificera vilket säte som ska väljas
-  const seatClick = () => {
-    setClassName("seat selected");
-  };
+  // function seatClick() {
+
+  //   setClassName("seat selected");
+  // }
+
+  useEffect(() => {
+    // Hämta alla säten för den valda filmen
+    // seats []
+    // loopa igenom seats och hitta rätt id.
+    // setClassName("seat selected")
+    const fetchSeats = async () => {
+      const result = await getSeats(selectedMovie);
+      console.log(result);
+      // setClassName(result);
+    };
+
+    fetchSeats();
+
+    // Dependency-arrayen sätts till selectedMovie vilket gör att useEffect
+    // kommer att köras varje gång den ändras.
+  }, [selectedMovie]);
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -46,11 +63,15 @@ function SeatPicker({ selectedMovie }: MovieProps) {
       <div className="container">
         <div className="screen"></div>
         <div className="row">
-          {seatArray1.map((seat, i) =>
+          {seatArray1.map((seat) =>
             seat.isOccupied ? (
               <div key={seat.seatNumber} className="seat occupied"></div>
             ) : (
-              <div key={i} className={className} onClick={seatClick}></div>
+              <div
+                key={seat.seatNumber}
+                className={className}
+                onClick={() => seatClick(seat.seatNumber)}
+              ></div>
             )
           )}
         </div>
