@@ -1,5 +1,8 @@
 import { useFormik, FormikErrors } from "formik";
 import { FormValues } from "./FormValues";
+import { Movie } from "./Movie";
+import { Seat } from "./Seat";
+
 // Importerar hook'en "useState"
 import React, { useState } from "react";
 
@@ -28,15 +31,26 @@ function validateForm(values: FormValues): FormikErrors<FormValues> {
   return errors;
 }
 
-// Definierar en funktionell komponent enligt"React.FC"
-const BookingForm: React.FC = () => {
-  // Använder useState-hooken för att skapa tillståndsvariabeln "showForm"
-  // samt funktionen "setShowForm" för att uppdatera tillståndet. showForm sätts först till false.
+type Props = {
+  selectedMovie: string;
+  selectedSeats: string[];
+  setSelectedSeats: React.Dispatch<React.SetStateAction<string[]>>;
+};
+
+function BookingForm({ selectedMovie, selectedSeats }: Props) {
+  const [movie, setMovie] = useState<Movie>();
+  const [seats, setSeats] = useState<Seat[]>([]);
   const [showForm, setShowForm] = useState(false);
 
-  // När clickEvent anropas sätts setShowForm till true
-  const clickEvent = () => {
-    setShowForm(true);
+  function resetSeats() {
+    setSeats([]);
+  }
+
+  const clickButton = () => {
+    if (selectedSeats.length !== 0) {
+      setShowForm(true);
+      console.log(selectedSeats);
+    }
   };
 
   const formik = useFormik<FormValues>({
@@ -50,13 +64,14 @@ const BookingForm: React.FC = () => {
       // lagra värdena i Seat.customer
       // fetch  method = post -> JSON API
       // alert(JSON.stringify(values, null, 2));
+      resetSeats();
       formik.resetForm();
     },
   });
   return (
     <>
       <div className="btnContainer">
-        <button className="bookingBtn" id="booking-btn" onClick={clickEvent}>
+        <button className="bookingBtn" id="booking-btn" onClick={clickButton}>
           <span>Book seats</span>
         </button>
       </div>
@@ -99,6 +114,6 @@ const BookingForm: React.FC = () => {
       )}
     </>
   );
-};
+}
 
 export default BookingForm;

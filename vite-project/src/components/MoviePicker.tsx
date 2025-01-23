@@ -8,10 +8,7 @@ type MovieProps = {
   setSelectedMovie: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const MoviePicker: React.FC<MovieProps> = ({
-  selectedMovie,
-  setSelectedMovie,
-}) => {
+function MoviePicker({ selectedMovie, setSelectedMovie }: MovieProps) {
   const [movies, setMovies] = useState<Movie[]>([]);
 
   // useEffect-hooken används för att köra en effekt när komponenten först laddas.
@@ -46,6 +43,6 @@ const MoviePicker: React.FC<MovieProps> = ({
       </div>
     </>
   );
-};
+}
 
 export default MoviePicker;

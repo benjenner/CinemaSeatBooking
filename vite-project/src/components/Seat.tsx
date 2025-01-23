@@ -2,7 +2,7 @@ import axios from "axios";
 import { Customer } from "./Customer";
 
 export interface Seat {
-  seatNumber: number;
+  id: string;
   isOccupied: boolean;
   customer: Customer;
 }
