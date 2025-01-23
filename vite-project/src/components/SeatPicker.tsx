@@ -1,42 +1,20 @@
-import { Seat, getSeats } from "./Seat";
+import { Seat } from "./Seat";
 import { getMovieById, Movie } from "./Movie";
 import { useState, useEffect } from "react";
 
-// const seatClick = (seatNumber: number): void => {
-
-//   // Sätet ska ändra klass till seat.selected
-//   // Texten ska uppdateras
-// };
+type SeatProps = {
+  selectedSeats: string[];
+  setSelectedSeats: React.Dispatch<React.SetStateAction<string[]>>;
+};
 
 type MovieProps = {
   selectedMovie: string;
 };
 
-function SeatPicker({ selectedMovie }: MovieProps) {
+type Props = SeatProps & MovieProps;
+
+function SeatPicker({ selectedMovie, selectedSeats, setSelectedSeats }: Props) {
   const [movie, setMovie] = useState<Movie>();
-  const [className, setClassName] = useState("seat");
-
-  // function seatClick() {
-
-  //   setClassName("seat selected");
-  // }
-
-  useEffect(() => {
-    // Hämta alla säten för den valda filmen
-    // seats []
-    // loopa igenom seats och hitta rätt id.
-    // setClassName("seat selected")
-    const fetchSeats = async () => {
-      const result = await getSeats(selectedMovie);
-      console.log(result);
-      // setClassName(result);
-    };
-
-    fetchSeats();
-
-    // Dependency-arrayen sätts till selectedMovie vilket gör att useEffect
-    // kommer att köras varje gång den ändras.
-  }, [selectedMovie]);
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -49,6 +27,13 @@ function SeatPicker({ selectedMovie }: MovieProps) {
     // Dependency-arrayen sätts till selectedMovie vilket gör att useEffect
     // kommer att köras varje gång den ändras.
   }, [selectedMovie]);
+
+  const seatClick = (id: string) => {
+    // Uppdaterar selectedSeats.
+    // Callback-funktionen prevSelectedSeats får det aktuella värdet av selectedSeats
+    // Spread-operatorn  skapar en ny array med alla positioner från prevSelectedSeats samt det nya ID't
+    setSelectedSeats((prevSelectedSeats) => [...prevSelectedSeats, id]);
+  };
 
   const allSeats: Seat[] = movie?.seats || [];
   const seatArray1: Seat[] = allSeats.slice(0, 8);
@@ -65,65 +50,98 @@ function SeatPicker({ selectedMovie }: MovieProps) {
         <div className="row">
           {seatArray1.map((seat) =>
             seat.isOccupied ? (
-              <div key={seat.seatNumber} className="seat occupied"></div>
+              <div key={seat.id} className="seat occupied"></div>
             ) : (
               <div
-                key={seat.seatNumber}
-                className={className}
-                onClick={() => seatClick(seat.seatNumber)}
+                key={seat.id}
+                className={
+                  selectedSeats.includes(seat.id) ? "seat selected" : "seat"
+                }
+                onClick={() => seatClick(seat.id)}
               ></div>
             )
           )}
         </div>
         <div className="row">
-          {seatArray2.map((seat, i) =>
+          {seatArray2.map((seat) =>
             seat.isOccupied ? (
-              <div key={seat.seatNumber} className="seat occupied"></div>
+              <div key={seat.id} className="seat occupied"></div>
             ) : (
-              <div key={i} className={className} onClick={seatClick}></div>
+              <div
+                key={seat.id}
+                className={
+                  selectedSeats.includes(seat.id) ? "seat selected" : "seat"
+                }
+                onClick={() => seatClick(seat.id)}
+              ></div>
             )
           )}
         </div>
         <div className="row">
-          {seatArray3.map((seat, i) =>
+          {seatArray3.map((seat) =>
             seat.isOccupied ? (
-              <div key={seat.seatNumber} className="seat occupied"></div>
+              <div key={seat.id} className="seat occupied"></div>
             ) : (
-              <div key={i} className={className} onClick={seatClick}></div>
+              <div
+                key={seat.id}
+                className={
+                  selectedSeats.includes(seat.id) ? "seat selected" : "seat"
+                }
+                onClick={() => seatClick(seat.id)}
+              ></div>
             )
           )}
         </div>
         <div className="row">
-          {seatArray4.map((seat, i) =>
+          {seatArray4.map((seat) =>
             seat.isOccupied ? (
-              <div key={seat.seatNumber} className="seat occupied"></div>
+              <div key={seat.id} className="seat occupied"></div>
             ) : (
-              <div key={i} className={className} onClick={seatClick}></div>
+              <div
+                key={seat.id}
+                className={
+                  selectedSeats.includes(seat.id) ? "seat selected" : "seat"
+                }
+                onClick={() => seatClick(seat.id)}
+              ></div>
             )
           )}
         </div>
         <div className="row">
-          {seatArray5.map((seat, i) =>
+          {seatArray5.map((seat) =>
             seat.isOccupied ? (
-              <div key={seat.seatNumber} className="seat occupied"></div>
+              <div key={seat.id} className="seat occupied"></div>
             ) : (
-              <div key={i} className={className} onClick={seatClick}></div>
+              <div
+                key={seat.id}
+                className={
+                  selectedSeats.includes(seat.id) ? "seat selected" : "seat"
+                }
+                onClick={() => seatClick(seat.id)}
+              ></div>
             )
           )}
         </div>
         <div className="row">
-          {seatArray6.map((seat, i) =>
+          {seatArray6.map((seat) =>
             seat.isOccupied ? (
-              <div key={seat.seatNumber} className="seat occupied"></div>
+              <div key={seat.id} className="seat occupied"></div>
             ) : (
-              <div key={i} className={className} onClick={seatClick}></div>
+              <div
+                key={seat.id}
+                className={
+                  selectedSeats.includes(seat.id) ? "seat selected" : "seat"
+                }
+                onClick={() => seatClick(seat.id)}
+              ></div>
             )
           )}
         </div>
       </div>
       <p className="text">
-        You have selected <span id="count">0</span> seats for a price of $
-        <span id="total">0</span>
+        You have selected <span id="count">{selectedSeats.length}</span> seats
+        for a price of $
+        <span id="total">{selectedSeats.length * (movie?.price || 0)}</span>
       </p>
     </>
   );
