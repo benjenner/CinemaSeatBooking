@@ -8,6 +8,11 @@ import AdminForm from "./components/AdminForm";
 function App() {
   const [selectedMovie, setSelectedMovie] = useState<string>("");
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
+
+  function resetValues() {
+    setSelectedMovie("");
+    setSelectedSeats([]);
+  }
   return (
     <>
       <MoviePicker
@@ -24,6 +29,7 @@ function App() {
         selectedSeats={selectedSeats}
         setSelectedSeats={setSelectedSeats}
         selectedMovie={selectedMovie}
+        resetValues={resetValues}
       ></BookingForm>
       <AdminForm></AdminForm>
     </>
