@@ -1,7 +1,9 @@
 import { useFormik, FormikErrors } from "formik";
 import { FormValues } from "./FormValues";
 import { Movie } from "./Movie";
-import { Seat } from "./Seat";
+import { Seat, getSeats } from "./Seat";
+import { CreateReservation } from "./Data";
+import { Customer } from "./Customer";
 
 // Importerar hook'en "useState"
 import React, { useState } from "react";
@@ -35,36 +37,50 @@ type Props = {
   selectedMovie: string;
   selectedSeats: string[];
   setSelectedSeats: React.Dispatch<React.SetStateAction<string[]>>;
+  resetValues: () => void;
 };
 
-function BookingForm({ selectedMovie, selectedSeats }: Props) {
+function BookingForm({ selectedMovie, selectedSeats, resetValues }: Props) {
   const [movie, setMovie] = useState<Movie>();
   const [seats, setSeats] = useState<Seat[]>([]);
   const [showForm, setShowForm] = useState(false);
 
-  function resetSeats() {
-    setSeats([]);
+  function resetUserChoices() {
+    resetValues();
   }
 
   const clickButton = () => {
     if (selectedSeats.length !== 0) {
       setShowForm(true);
-      console.log(selectedSeats);
     }
   };
 
   const formik = useFormik<FormValues>({
-    // Var/Hur typ'ar jag parametrarna?
     initialValues: {
       fullName: "",
       phone: "",
     },
     validate: validateForm,
     onSubmit: (values) => {
-      // lagra värdena i Seat.customer
+      const customer: Customer = {
+        fullName: values.fullName,
+        phone: values.phone,
+      };
+
+      const seats = getSeats("1");
+      console.log(seats);
+
+      // CreateReservation({
+      //   seatsId: selectedSeats,
+      //   movieId: selectedMovie,
+      //   customer: customer,
+      // });
+
+      // lagra värdena samt ändra till isOccupied
       // fetch  method = post -> JSON API
       // alert(JSON.stringify(values, null, 2));
-      resetSeats();
+      resetUserChoices();
+      setShowForm(false);
       formik.resetForm();
     },
   });

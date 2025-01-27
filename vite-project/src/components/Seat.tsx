@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Customer } from "./Customer";
+import { Movie } from "./Movie";
 
 export interface Seat {
   id: string;
@@ -7,9 +8,20 @@ export interface Seat {
   customer: Customer;
 }
 
-export async function getSeats(id: string) {
-  const url = `http://localhost:3000/movies/${id}/seats`;
-  // Specificerar att en array av  typen Movie kommer returneras
-  const response = await axios.get<Seat[]>(url);
-  return response.data;
+export async function getSeats(id: string): Promise<Seat[]> {
+  const url = `http://localhost:3000/movies/${id}`;
+
+  try {
+    const response = await axios.get<Movie>(url);
+
+    const movie = response.data;
+    if (movie?.seats) {
+      return movie.seats;
+    } else {
+      throw new Error("Data is not available");
+    }
+  } catch (error) {
+    console.error("Error fetching", error);
+    throw error;
+  }
 }

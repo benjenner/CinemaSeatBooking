@@ -2,16 +2,11 @@ import { Seat } from "./Seat";
 import { getMovieById, Movie } from "./Movie";
 import { useState, useEffect } from "react";
 
-type SeatProps = {
+type Props = {
   selectedSeats: string[];
   setSelectedSeats: React.Dispatch<React.SetStateAction<string[]>>;
-};
-
-type MovieProps = {
   selectedMovie: string;
 };
-
-type Props = SeatProps & MovieProps;
 
 function SeatPicker({ selectedMovie, selectedSeats, setSelectedSeats }: Props) {
   const [movie, setMovie] = useState<Movie>();
