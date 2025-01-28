@@ -24,10 +24,13 @@ function SeatPicker({ selectedMovie, selectedSeats, setSelectedSeats }: Props) {
   }, [selectedMovie]);
 
   const seatClick = (id: string) => {
-    // Uppdaterar selectedSeats.
-    // Callback-funktionen prevSelectedSeats får det aktuella värdet av selectedSeats
-    // Spread-operatorn  skapar en ny array med alla positioner från prevSelectedSeats samt det nya ID't
-    setSelectedSeats((prevSelectedSeats) => [...prevSelectedSeats, id]);
+    if (selectedSeats.includes(id)) {
+    } else {
+      // Uppdaterar selectedSeats.
+      // Callback-funktionen prevSelectedSeats får det aktuella värdet av selectedSeats
+      // Spread-operatorn skapar en ny array med alla positioner från prevSelectedSeats samt det nya ID't
+      setSelectedSeats((prevSelectedSeats) => [...prevSelectedSeats, id]);
+    }
   };
 
   const allSeats: Seat[] = movie?.seats || [];

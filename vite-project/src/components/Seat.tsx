@@ -8,6 +8,11 @@ export interface Seat {
   customer: Customer;
 }
 
+export interface NewSeat {
+  isOccupied: boolean;
+  id: string;
+}
+
 export async function getSeats(id: string): Promise<Seat[]> {
   const url = `http://localhost:3000/movies/${id}`;
 
@@ -24,4 +29,21 @@ export async function getSeats(id: string): Promise<Seat[]> {
     console.error("Error fetching", error);
     throw error;
   }
+}
+
+export function generateSeats() {
+  let idCounter = 0;
+  const seats: NewSeat[] = new Array(48);
+
+  // Genererar ID för varje säte. json-server genererar ej id'n för inre objekt
+  for (let i = 0; i < seats.length; i++) {
+    idCounter++;
+    const counterString = idCounter.toString();
+    seats[i] = {
+      id: counterString,
+      isOccupied: false,
+    };
+  }
+
+  return seats;
 }

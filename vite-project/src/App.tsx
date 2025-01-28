@@ -31,7 +31,10 @@ function App() {
         selectedMovie={selectedMovie}
         resetValues={resetValues}
       ></BookingForm>
-      <AdminForm></AdminForm>
+      <AdminForm
+        selectedMovie={selectedMovie}
+        setSelectedMovie={setSelectedMovie}
+      ></AdminForm>
     </>
   );
 }
