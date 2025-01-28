@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Seat } from "./Seat";
+import { Seat, NewSeat } from "./Seat";
 
 const url = "http://localhost:3000/movies";
 
@@ -8,6 +8,12 @@ export interface Movie {
   price: number;
   id: string;
   seats?: Seat[];
+}
+
+export interface NewMovie {
+  title: string;
+  price: number;
+  seats?: NewSeat[];
 }
 
 export async function getMovies() {

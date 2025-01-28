@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
 }
 
@@ -139,9 +139,50 @@ p.text span {
   align-items: center;
 }
 
+.adminChoiceContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 2px dotted #6feaf6;
+  gap: 20px;
+  padding: 30px;
+  width: 600px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.adminWindowContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border: 2px dotted #6feaf6;
+  gap: 20px;
+  padding: 30px;
+  width: 600px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
 .adminBtn {
   margin-top: 250px;
   font-size: 0.8em;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #ffd1dc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.crudBtn {
+  margin-top: 30px;
+  font-size: 1em;
   padding: 5px;
   text-decoration: none;
   color: black;
@@ -180,6 +221,17 @@ input {
   border-radius: 10px;
   cursor: pointer;
   justify-content: flex-start;
+}
+
+.submitBtnCrud {
+  font-size: 1.2em;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #ffd1dc;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .error {
