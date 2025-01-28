@@ -12,4 +12,4 @@ Jag ville först hantera dem olika elementens state's med context API. Jag hade 
 
 För att validera mina formulär använde jag mig av Formik. Formik verkade till en början svårt att greppa men jag förstod ganska snabbt att det gjorde koden väldigt kompakt när det kom till att validera men också submit'a formuläret. 
 
-En rolig uppgift som stuntals gav mig rejäl huudbry och huvudvärk MEN som jag också lärde mig massor av. 
+En rolig uppgift som stuntals gav mig rejäl huvudbry och huvudvärk MEN som jag också lärde mig massor av. 
