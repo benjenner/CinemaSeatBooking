@@ -1,6 +1,6 @@
-import { Booking } from "./Booking";
+import { Booking, Movie, NewMovie } from "./Interface";
 import axios from "axios";
-import { Movie, getMovieById, NewMovie } from "./Movie";
+import { getMovieById } from "./Movie";
 
 export async function createReservation(values: Booking) {
   const movie = await getMovieById(values.movieId);
