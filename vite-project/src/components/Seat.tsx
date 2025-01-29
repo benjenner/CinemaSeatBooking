@@ -1,17 +1,5 @@
 import axios from "axios";
-import { Customer } from "./Customer";
-import { Movie } from "./Movie";
-
-export interface Seat {
-  id: string;
-  isOccupied: boolean;
-  customer: Customer;
-}
-
-export interface NewSeat {
-  isOccupied: boolean;
-  id: string;
-}
+import { Movie, Seat, NewSeat } from "./Interface";
 
 export async function getSeats(id: string): Promise<Seat[]> {
   const url = `http://localhost:3000/movies/${id}`;

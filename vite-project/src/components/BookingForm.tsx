@@ -1,8 +1,7 @@
 import { useFormik, FormikErrors } from "formik";
-import { FormValues } from "./FormValues";
 import { createReservation } from "./Data";
-import { Customer } from "./Customer";
 import React, { useState } from "react";
+import { FormValues, Customer } from "./Interface";
 
 // Tar emot values som argument, ett objekt av typen FormValues. Returnerar objekt av typen FormikErrors<FormValues>
 function validateForm(values: FormValues): FormikErrors<FormValues> {
@@ -25,7 +24,6 @@ function validateForm(values: FormValues): FormikErrors<FormValues> {
   } else if (!regex.test(values.phone)) {
     errors.phone = "Phone number can only contain numbers";
   }
-
   return errors;
 }
 

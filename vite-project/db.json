@@ -171,7 +171,11 @@
         },
         {
           "id": "36",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Filip Sanchez",
+            "phone": "072872321"
+          }
         },
         {
           "id": "37",
@@ -207,7 +211,11 @@
         },
         {
           "id": "45",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Klara Karlsson",
+            "phone": "070812371"
+          }
         },
         {
           "id": "46",
@@ -548,7 +556,11 @@
         },
         {
           "id": "21",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Magnus Andersson",
+            "phone": "0707238711"
+          }
         },
         {
           "id": "22",
@@ -576,7 +588,11 @@
         },
         {
           "id": "28",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Jan Jansson",
+            "phone": "0707682112"
+          }
         },
         {
           "id": "29",
@@ -679,7 +695,11 @@
         },
         {
           "id": "4",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Lovisa Karlsson",
+            "phone": "0707238623"
+          }
         },
         {
           "id": "5",
@@ -687,7 +707,11 @@
         },
         {
           "id": "6",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Max Nilsson",
+            "phone": "070618272"
+          }
         },
         {
           "id": "7",
@@ -739,7 +763,11 @@
         },
         {
           "id": "19",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Casper Danielsson",
+            "phone": "070812387"
+          }
         },
         {
           "id": "20",

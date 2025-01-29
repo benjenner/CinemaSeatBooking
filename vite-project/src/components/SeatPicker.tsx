@@ -1,6 +1,6 @@
-import { Seat } from "./Seat";
-import { getMovieById, Movie } from "./Movie";
+import { getMovieById } from "./Movie";
 import { useState, useEffect } from "react";
+import { Movie, Seat } from "./Interface";
 
 type Props = {
   selectedSeats: string[];

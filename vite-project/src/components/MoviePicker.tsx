@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { getMovies } from "./Movie";
-import { Movie } from "./Movie";
+import { Movie } from "./Interface";
 
 type MovieProps = {
   selectedMovie: string;
@@ -34,6 +34,7 @@ function MoviePicker({ selectedMovie, setSelectedMovie }: MovieProps) {
           id="movie"
           onChange={(event) => setSelectedMovie(event.target.value)}
         >
+          <option></option>
           {movies.map((movie, i) => (
             <option key={i} value={movie.id}>
               {movie.title} ({movie.price}$)
