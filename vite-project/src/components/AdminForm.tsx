@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useFormik, FormikErrors } from "formik";
-import { createMovie, updateMovie, deleteMovie } from "./Data";
-import { getMovies } from "./Movie";
-import { generateSeats, getSeats } from "./Seat";
+import {
+  createMovie,
+  updateMovie,
+  deleteMovie,
+  getMovies,
+  generateSeats,
+  getSeats,
+} from "./Data";
+import {} from "./Data";
 import { Movie, FormValuesCreate } from "./Interface";
 
 // Tar emot values som argument, ett objekt av typen FormValues. Returnerar objekt av typen FormikErrors<FormValues>
