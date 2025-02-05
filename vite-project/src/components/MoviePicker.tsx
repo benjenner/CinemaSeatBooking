@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getMovies } from "./Movie";
+import { getMovies } from "./Data";
 import { Movie } from "./Interface";
 
 type MovieProps = {

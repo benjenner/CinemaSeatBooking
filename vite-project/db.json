@@ -19,7 +19,11 @@
         },
         {
           "id": "4",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Karin Nilsson",
+            "phone": "072222345"
+          }
         },
         {
           "id": "5",
@@ -223,7 +227,11 @@
         },
         {
           "id": "47",
-          "isOccupied": false
+          "isOccupied": true,
+          "customer": {
+            "fullName": "Fredrik Löf",
+            "phone": "0708123782"
+          }
         },
         {
           "id": "48",

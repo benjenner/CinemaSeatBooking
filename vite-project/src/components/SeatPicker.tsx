@@ -1,4 +1,4 @@
-import { getMovieById } from "./Movie";
+import { getMovieById } from "./Data";
 import { useState, useEffect } from "react";
 import { Movie, Seat } from "./Interface";
 
