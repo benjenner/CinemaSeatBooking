@@ -1,4 +1,4 @@
-## Project description
+## Cinema seat booking program
 
 
 ## Component structure
