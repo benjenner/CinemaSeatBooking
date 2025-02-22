@@ -1,4 +1,4 @@
-# Cinea Seat Booking 
+## Cinea Seat Booking 
 
 
 ## Component structure
