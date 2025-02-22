@@ -1,24 +1,21 @@
-# Projektbeskrivning
+# Cinea Seat Booking 
 
-## Val av Teknik
-Jag valde att göra projektet i TypeScript för att få mer kontroll i utvecklingsfasen av programmet. Det är inte jättemycket data som ska valideras men jag ville ändå prova på att använda TS.
 
-## Komponentstruktur
-Till en början strukturerade jag upp vilka komponenter jag ville att programmet skulle ha. Det tog lite tid att förstå hur komponenterna i React fungerar och hur jag skulle använda mig av dem. Jag valde att betrakta varje del av programmet där användaren behöver ta ett beslut som en komponent: att välja film, att välja säte, och att administrera de olika filmerna. Vidare hade jag kanske kunnat göra en komponent av `<select>`-elementet där användaren väljer film, då denna återanvänds i admin-formuläret.
+## Component structure
+Initially, I structured which components I wanted the program to have. It took some time to understand how components in React work and how to use them. I chose to treat each part of the program where the user needs to make a decision as a component: choosing a movie, selecting a seat, and managing the different movies. Additionally, I should've made a component out of the <select> element where the user chooses the movie, as this is reused in the admin form.
 
-## HTML- och CSS-anpassningar
-Jag behöll medföljande HTML-element precis som de var. Det jag lade till var knappar för bokning och administration samt formulär för respektive knappar. Och, såklart, diverse funktionalitet som "onClick" och "onSubmit" med mera.
+## HTML and CSS Adjustments
 
-Jag anpassade min CSS något då det blev lite skavanker vid övergången till React, men till stor del behöll jag den styling som fanns.
+I kept the accompanying HTML elements just as they were. What I added were buttons for booking and administration as well as forms for each button. And, of course, various functionalities like "onClick" and "onSubmit", among others.
+
+I adjusted my CSS somewhat as there were some glitches during the transition to React, but for the most part, I kept the existing styling.
 
 ## State Management
-Jag ville först hantera de olika elementens states med Context API. Jag hade dock svårt att få det att fungera så jag bestämde mig för att istället använda mig av property drilling, vilket jag tyckte fungerade bra i detta projekt som inte är speciellt omfattande. Det var till en början lite svårt att greppa hur olika states skickas fram och tillbaka men efter ett tag satte sig även den logiken. Ett spännande sätt att programmera men jag kan helt klart se nackdelar vad gäller läsbarhet och "estetik" (det blir väldigt tjockt i App.tsx) om det tillämpas på en större applikation.
+I initially wanted to manage the states of the different elements with the Context API. However, I had difficulty getting it to work, so I decided to use property drilling instead, which I thought worked well in this relatively small project. It was initially a bit challenging to grasp how different states are passed back and forth, but after a while, the logic set in. It's an exciting way to program, but I can definitely see drawbacks regarding readability and "aesthetics" (it becomes very bloated in App.tsx) if applied to a larger application.
 
-## Formulärvalidering
-För att validera mina formulär använde jag mig av Formik. Formik verkade till en början svårt att greppa men jag förstod ganska snabbt att det gjorde koden väldigt kompakt när det kom till att validera men också att skicka in formuläret.
+## Form validation
+To validate my forms, I used Formik. Formik initially seemed difficult to grasp, but I quickly realized it made the code very compact when it came to validating and also submitting the form.
 
-## Fortsatt Utveckling
-Vidare vill jag göra vissa funktioner i datakomponenten generiska och repetera mindre kod, som till exempel URL i anropen.
+## Further Development
+I want to make certain functions in the data component more generic and repeat less code, such as the URL in the requests. 
 
-## Sammanfattning
-En rolig uppgift som stundtals gav mig rejäl huvudbry och huvudvärk men som jag också lärde mig massor av.
